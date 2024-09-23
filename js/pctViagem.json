@@ -1,0 +1,77 @@
+{
+    "pacotes": [{
+        "cidade": "Fortaleza",
+        "data_inicial": "2024-09-07",
+        "data_final": "2024-09-12",
+        "preco": 813
+    }, {
+        "cidade": "Maceió",
+        "data_inicial": "2024-09-12",
+        "data_final": "2024-09-20",
+        "preco": 617
+    }, {
+        "cidade": "Rio de Janeiro",
+        "data_inicial": "2024-09-10",
+        "data_final": "2024-09-15",
+        "preco": 512
+    }, {
+        "cidade": "Orlando",
+        "data_inicial": "2024-09-21",
+        "data_final": "2024-09-30",
+        "preco": 1750
+    }, {
+        "cidade": "Madri",
+        "data_inicial": "2024-09-24",
+        "data_final": "2024-10-03",
+        "preco": 2150
+    }, {
+        "cidade": "Paris",
+        "data_inicial": "2024-09-30",
+        "data_final": "2024-10-12",
+        "preco": 617
+    }, {
+        "cidade": "Cancún",
+        "data_inicial": "2024-09-27",
+        "data_final": "2024-10-02",
+        "preco": 1975
+    }, {
+        "cidade": "Bariloche",
+        "data_inicial": "2024-10-05",
+        "data_final": "2024-10-15",
+        "preco": 1752
+    }],
+    "passagens": [{
+        "cidade": "São Paulo",
+        "mes": "Setembro",
+        "preco": 739
+    }, {
+        "cidade": "Curitiba",
+        "mes": "Setembro",
+        "preco": 865
+    }, {
+        "cidade": "Florianópolis",
+        "mes": "Setembro",
+        "preco": 889
+    }, {
+        "cidade": "Rio de Janeiro",
+        "mes": "Setembro",
+        "preco": 951
+    }, {
+        "cidade": "Los Angeles",
+        "mes": "Outubro-Novembro",
+        "preco": 4008
+    }, {
+        "cidade": "Miami",
+        "mes": "Setembro-Novembro",
+        "preco": 3738
+    }, {
+        "cidade": "Lisboa",
+        "mes": "Setembro-Novembro",
+        "preco": 6859
+    }, {
+        "cidade": "Espanha",
+        "mes": "Outubro-Novembro",
+        "preco": 6566
+    }]
+
+}

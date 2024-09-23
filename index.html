@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agência de Viagens</title>
+
+    <!-- Link Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Fim links bootstrap -->
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style/css/style.css" />
+
+    <!-- Link fontweasome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/script.js"></script>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row container-parallax">
+        <div class="col-12 imagem-parallax"></div>
+        <div class="col-10 box-buscar-destino">
+          <p class="row">Encontre seu destino</p>
+          <div class="row">
+            <div class="col-12">
+              <div
+                class="row d-flex justify-content-center text-center box-buscar-destino-unit"
+              >
+                <div class="col-4 mt-5">
+                  <div class="row">
+                    <div
+                      class="col-12 d-flex justify-content-center text-center"
+                    >
+                      <input
+                        type="text"
+                        class="form-control form-control-sm text-center rounded-start-4"
+                        name="origem"
+                        id="origem"
+                        placeholder="Origem"
+                      />
+                      <input
+                        type="text"
+                        class="form-control form-control-sm text-center rounded-end-4"
+                        name="destino"
+                        id="destino"
+                        placeholder="Destino"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 mt-5">
+                  <div class="row">
+                    <div
+                      class="col-12 d-flex justify-content-center text-center"
+                    >
+                      <input
+                        type="text"
+                        class="form-control form-control-sm text-center rounded-start-4"
+                        name="dateGo"
+                        id="dateGo"
+                        placeholder="Data de ida"
+                      />
+                      <input
+                        type="text"
+                        class="form-control form-control-sm text-center rounded-end-4"
+                        name="dateReturn"
+                        id="dateReturn"
+                        placeholder="Data de volta"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-4 mt-5">
+                  <div class="row">
+                    <div
+                      class="col-12 d-flex justify-content-center text-center"
+                    >
+                      <input
+                        type="number"
+                        class="form-control form-control-sm text-center rounded-start-4"
+                        name="rooms"
+                        id="rooms"
+                        placeholder="Quartos"
+                        min="0"
+                      />
+                      <input
+                        type="number"
+                        class="form-control form-control-sm text-center rounded-end-4"
+                        name="travelers"
+                        id="travelers"
+                        placeholder="Viajantes"
+                        min="0"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 mt-3">
+                  <button
+                    type="button"
+                    id="buscarDestino"
+                    class="btn btn-info w-25 rounded-5"
+                  >
+                    Buscar destino<i class="far fa-arrow-alt-circle-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 container-menu-navegacao">
+          <div class="row">
+            <nav class="col-12 mx-auto">
+              <ul
+                class="navbar navbar-nav d-flex flex-row justify-content-around text-center"
+              >
+                <li class="nav-item">
+                  <span><i class="fas fa-suitcase"></i></span>
+                  <a class="nav-link" href="#">Pacotes</a>
+                </li>
+                <li class="nav-item">
+                  <span><i class="fas fa-plane"></i></span>
+                  <a class="nav-link" href="#">Passagens</a>
+                </li>
+                <li class="nav-item">
+                  <span><i class="fas fa-bed"></i></span>
+                  <a class="nav-link" href="#">Hotéis</a>
+                </li>
+                <li class="nav-item">
+                  <span><i class="fas fa-ship"></i></span>
+                  <a class="nav-link" href="#">Navios</a>
+                </li>
+                <li class="nav-item">
+                  <span><i class="fas fa-car"></i></span>
+                  <a class="nav-link" href="#">Carros</a>
+                </li>
+                <li class="nav-item">
+                  <span><i class="fas fa-shield-alt"></i></span>
+                  <a class="nav-link" href="#">Seguro Viagem</a>
+                </li>
+                <li class="nav-item">
+                  <button class="btn btn-warning" id="botao-entrar">
+                    <i class="fas fa-sign-in-alt"></i> Entrar
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="row container-pacotes-viagens p-4 my-4">
+        <div class="col-5">
+          <div class="row p-2">
+            <div class="col-1 d-flex justify-content-center p-2">
+              <i class="fas fa-suitcase-rolling my-auto icone-geral"></i>
+            </div>
+            <div class="col-11 p-3">
+              <h2 class="display-5">Pacotes de Viagem</h2>
+              <p>
+                Confira os pacotes de viagens nacionais e internacionais.
+                <span style="color: blue; font-size: 12px; font-weight: 500"
+                  >Saindo de São Paulo</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="card-box p-0 d-flex flex-flow justify-content-center">
+            <div class="d-flex flex-column text-center p-1">
+              <i
+                class="fas fa-chevron-circle-left my-auto display-5 arrow-left-pacotes"
+              ></i>
+            </div>
+            <ul
+              class="navbar navbar-nav p-2 d-flex flex-row flex-nowrap justify-content-left gap-4"
+              id="pacote-viagens"
+            ></ul>
+            <div class="d-flex flex-column text-center p-1">
+              <i
+                class="fas fa-chevron-circle-right my-auto display-5 arrow-right-pacotes"
+              ></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row container-passagens-aereas p-4 my-4">
+        <div class="col-7">
+          <div class="card-box p-0 d-flex flex-flow justify-content-center">
+            <div class="d-flex flex-column text-center p-1">
+              <i
+                class="fas fa-chevron-circle-left my-auto display-5 arrow-left-passagens"
+              ></i>
+            </div>
+            <ul
+              class="navbar navbar-nav p-2 d-flex flex-row flex-nowrap justify-content-left gap-4"
+              id="passagens-aereas"
+            ></ul>
+            <div class="d-flex flex-column text-center p-1">
+              <i
+                class="fas fa-chevron-circle-right my-auto display-5 arrow-right-passagens"
+              ></i>
+            </div>
+          </div>
+        </div>
+        <div class="col-5">
+          <div class="row p-2">
+            <div class="col-11 p-3">
+              <h2 class="display-5 text-end">Passagens aéreas</h2>
+            </div>
+            <div class="col-1 d-flex justify-content-end">
+              <i class="fas fa-suitcase-rolling my-auto icone-geral"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <hr />
+
+      <div class="row p-2">
+        <div class="col-1 d-flex justify-content-end">
+          <img src="img/percent.svg" width="30px" alt="" />
+        </div>
+        <div class="col-11 p-3">
+          <h2 class="display-5 text-start">Novidades</h2>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-8 mx-auto container-novidades p-3">
+          <div class="row">
+            <div class="col-12 mt-4 text-center">
+              <h2>
+                Assine nossa newsletter para receber as melhores ofertas da sua
+                próxima viagem
+              </h2>
+            </div>
+            <div class="col-12 my-3 d-flex justify-content-center gap-2">
+              <input
+                type="text"
+                name="nomeNewsletter"
+                id="nomeNewsletter"
+                class="form-control w-50"
+                placeholder="Nome"
+              />
+              <input
+                type="email"
+                name="emailNewsletter"
+                id="emailNewsletter"
+                class="form-control"
+                placeholder="Digite o e-mail"
+              />
+              <button type="submit" class="btn btn-success" id="assinar">
+                Assinar
+              </button>
+            </div>
+            <div class="col-12 text-center">
+              <p>
+                Concordo em receber comunicações, ofertas e compartilhar meus
+                dados pessoais com a CVC e empresas parceiras. Para mais
+                informações, consulte as políticas de privacidade.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 container-footer p-3">
+          <h4>Formas de pagamento</h4>
+          <div class="flags mb-3">
+            <img src="/img/visa 1.svg" alt="" />
+            <img src="/img/mastercard 1.svg" alt="" />
+            <img src="/img/hipercard 1.svg" alt="" />
+            <img src="/img/diners 1.svg" alt="" />
+            <img src="https://img.icons8.com/office/40/money--v1.png" />
+          </div>
+          <div>
+            <p>
+              Agências Tur S.A - CNPJ: 00.000.000/0000-00 - Rua da Agência, 001,
+              5º andar | Bairro Da Agência, Brasil
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,910 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  font-family: "Montserrat", system-ui;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+.container-parallax {
+  height: 100vh;
+  position: relative;
+}
+.container-parallax .imagem-parallax {
+  height: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background: url("../../img/fernandoNoronha.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+}
+.container-parallax .box-buscar-destino {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit {
+  height: 200px;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit input {
+  box-shadow: 1px 1px 3px black;
+  height: 40px;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #origem {
+  background: url("../../img/map-marker-alt-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 10px;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #origem:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #destino {
+  background: url("../../img/map-marker-alt-solid.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 138px;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #destino:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateGo {
+  background: url("../../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 10px;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateGo:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateGo:focus {
+  background: url(none);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: none;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateGo:focus:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateReturn {
+  background: url("../../img/calendar.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 138px;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateReturn:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateReturn:focus {
+  background: url(none);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: none;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #dateReturn:focus:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #rooms {
+  background: url("../../img/bed.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 10px;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #rooms:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #travelers {
+  background: url("../../img/people.svg");
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position-y: center;
+  background-position-x: 138px;
+  background-color: white;
+}
+.container-parallax .box-buscar-destino .box-buscar-destino-unit #travelers:focus {
+  background-color: rgb(255, 255, 214);
+}
+.container-parallax .box-buscar-destino p {
+  position: absolute;
+  top: -50px;
+  left: none;
+  transform: none;
+  text-indent: 10px;
+  color: white;
+  font-size: 30px;
+  text-shadow: 1px 1px 3px black;
+}
+.container-parallax .box-buscar-destino button {
+  transition: 0.5s;
+  font-size: 16px;
+  box-shadow: 1px 1px 3px black;
+}
+.container-parallax .box-buscar-destino button:hover {
+  background-color: orange;
+  border: 1px solid transparent;
+  color: white;
+  transition: 0.3s;
+}
+.container-parallax .box-buscar-destino button i {
+  margin-left: 30px;
+}
+.container-parallax .container-menu-navegacao {
+  position: absolute;
+  top: none;
+  left: none;
+  transform: none;
+  padding: 0;
+}
+.container-parallax .container-menu-navegacao .navbar {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.301) 60%, rgba(255, 255, 255, 0));
+  padding: 10px;
+}
+.container-parallax .container-menu-navegacao .navbar li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+.container-parallax .container-menu-navegacao .navbar li:hover > a, .container-parallax .container-menu-navegacao .navbar li:hover > span:not(#sigin) {
+  color: orange;
+  text-shadow: 1px 1px 3px black;
+  transition: 0.3s;
+}
+.container-parallax .container-menu-navegacao .navbar li span, .container-parallax .container-menu-navegacao .navbar li a {
+  color: white;
+  font-size: 1rem;
+  text-shadow: 0px 0px 2px transparent;
+  transition: 0.5s;
+}
+.container-parallax .container-menu-navegacao .navbar li button {
+  padding: 10px;
+  transition: 0.5s;
+}
+.container-parallax .container-menu-navegacao .navbar li button:hover {
+  background-color: orange;
+  border: 1px solid orange;
+  color: white;
+  transition: 0.3s;
+}
+.container-parallax .container-menu-navegacao .navbar li button i {
+  margin-right: 10px;
+}
+.container-parallax .container-menu-navegacao button {
+  box-shadow: 1px 1px 3px black;
+  width: 120px;
+}
+
+.icone-geral {
+  font-size: 60px;
+}
+
+.card-box {
+  width: 100%;
+}
+.card-box ul {
+  overflow: hidden;
+}
+
+.arrow-left-pacotes,
+.arrow-right-pacotes,
+.arrow-left-passagens,
+.arrow-right-passagens {
+  cursor: pointer;
+}
+
+.card-destino-1 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-1 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-1 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-1 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-1 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-2 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-2 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-2 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-2 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-2 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-3 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-3 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-3 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-3 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-3 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-4 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-4 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-4 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-4 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-4 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-5 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-5 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-5 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-5 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-5 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-6 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-6 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-6 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-6 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-6 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-7 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-7 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-7 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-7 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-7 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-8 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-8 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-8 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-8 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-8 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-9 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-9 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-9 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-9 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-9 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-destino-10 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-destino-10 .card-destino-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPacote10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-destino-10 .card-destino-img:hover {
+  background-size: 125%;
+}
+.card-destino-10 .card-destino-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-destino-10 .card-destino-texto .card-destino-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-1 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-1 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-1 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-1 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-1 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-2 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-2 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-2 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-2 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-2 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-3 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-3 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-3 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-3 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-3 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-4 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-4 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-4 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-4 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-4 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-5 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-5 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-5 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-5 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-5 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-6 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-6 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-6 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-6 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-6 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-7 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-7 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-7 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-7 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-7 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-8 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-8 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-8 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-8 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-8 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-9 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-9 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-9 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-9 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-9 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.card-passagem-10 {
+  width: 150px;
+  height: 400px;
+  border-radius: 15px;
+  box-shadow: 1px 1px 3px black;
+  cursor: pointer;
+}
+.card-passagem-10 .card-passagem-img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 160px;
+  background: url("../../img/imagemPassagem10.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-attachment: fixed;
+  background-attachment: initial;
+  background-position: center;
+}
+.card-passagem-10 .card-passagem-img:hover {
+  background-size: 125%;
+}
+.card-passagem-10 .card-passagem-texto {
+  padding: 5px;
+  margin-top: 10px;
+  height: 236px;
+}
+.card-passagem-10 .card-passagem-texto .card-passagem-texto-geral {
+  font-size: 12px;
+}
+
+.container-novidades {
+  background-color: orange;
+  border-radius: 20px;
+  box-shadow: -1px -1px 10px black;
+}
+.container-novidades #nomeNewsletter {
+  height: 60px;
+}
+.container-novidades #emailNewsletter {
+  height: 60px;
+}
+.container-novidades p {
+  font-size: 13px;
+}
+
+.container-footer {
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0px 0px 5px rgb(119, 119, 119);
+}
+.container-footer h4 {
+  margin-bottom: 10px;
+}
+.container-footer img {
+  width: 30px;
+  margin: 0 20px;
+}
+.container-footer .flags {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+.container-footer p {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding: 0;
+  color: rgb(161, 153, 153);
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import '_mixins.scss';
+@import '_variaveis.scss';
+
+* {
+    font-family: "Montserrat", system-ui;
+    font-weight: 400;
+    box-sizing: border-box;
+}
+
+.container-parallax {
+    height: 100vh;
+    position: relative;
+    .imagem-parallax {
+        height: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        @include backgroundiImagemFixed("../../img/fernandoNoronha.webp");
+    }
+    .box-buscar-destino {
+        @include alignItems(absolute, 36%, 50%, translateX(-50%)); // tipo, top, left, transform(%)
+        background-color: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        .box-buscar-destino-unit {
+            height: 200px;
+            input {
+                box-shadow: $sombreamentoPadrao;
+                height: 40px;
+            }
+            #origem {
+                @include backgroundIconFixedInputs ('../../img/map-marker-alt-solid.svg', 10px);
+            }
+            #destino {
+                @include backgroundIconFixedInputs ('../../img/map-marker-alt-solid.svg', 138px);
+            }
+            #dateGo {
+                @include backgroundIconFixedInputs ('../../img/calendar.svg', 10px);
+                &:focus {
+                    @include backgroundIconFixedInputs (none, none);
+                }
+            }
+            #dateReturn {
+                @include backgroundIconFixedInputs ('../../img/calendar.svg', 138px);
+                &:focus {
+                    @include backgroundIconFixedInputs (none, none);
+                }
+            }
+            #rooms {
+                @include backgroundIconFixedInputs ('../../img/bed.svg', 10px);
+            }
+            #travelers {
+                @include backgroundIconFixedInputs ('../../img/people.svg', 138px);
+            }
+        }
+        p {
+            @include alignItems(absolute, -50px, none, none); // tipo, top, left, transform(%)
+            text-indent: 10px;
+            color: $letraBranca;
+            font-size: 30px;
+            text-shadow: $sombreamentoPadrao;
+        }
+        button {
+            transition: 0.5s;
+            font-size: 16px;
+            box-shadow: $sombreamentoPadrao;
+            &:hover {
+                background-color: $laranja;
+                border: 1px solid transparent;
+                color: $letraBranca;
+                transition: 0.3s;
+            }
+            i {
+                margin-left: 30px;
+            }
+        }
+    }
+    .container-menu-navegacao {
+        @include alignItems(absolute, none, none, none); // tipo, top, left, transform(%)
+        padding: 0;
+        .navbar {
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.301) 60%, rgba(255, 255, 255, 0));
+            padding: 10px;
+            li {
+                cursor: pointer;
+                padding: 5px 10px;
+                &:hover>a, &:hover>span:not(#sigin) {
+                    color: $laranja;
+                    text-shadow: $sombreamentoPadrao;
+                    transition: 0.3s;
+                }
+                span, a {
+                    color: $letraBranca;
+                    font-size: 1rem;
+                    text-shadow: 0px 0px 2px transparent;
+                    transition: 0.5s;
+                }
+                button {
+                    padding: 10px;
+                    transition: 0.5s;
+                    &:hover {
+                        background-color: $laranja;
+                        border: 1px solid $laranja;
+                        color: $letraBranca;
+                        transition: 0.3s;
+                    }
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+            }   
+        }
+        button {
+            box-shadow: $sombreamentoPadrao;
+            width: 120px;
+        }
+    }
+}
+
+.icone-geral {
+    font-size: 60px;
+}
+
+.card-box {
+    width: 100%;
+    ul {
+        overflow: hidden;
+    }
+} 
+.arrow-left-pacotes,
+.arrow-right-pacotes,
+.arrow-left-passagens,
+.arrow-right-passagens {
+    cursor: pointer;
+}
+
+@for $i from 1 through $totalCards {
+    .card-destino-#{$i} {
+        width: $larguraCards;
+        height: $alturaCards;
+        border-radius: 15px;
+        box-shadow: $sombreamentoPadrao;
+        cursor: pointer;
+        .card-destino-img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: $alturaCards * 0.40;
+            @include backgroundiImagemFixed("../../img/imagemPacote#{$i}.jpg");
+            background-attachment: initial;
+            background-position: center;
+            &:hover {
+                background-size: 125%;
+            }
+        }
+        .card-destino-texto {
+            padding:5px;
+            margin-top:10px;
+            height: $alturaCards * 0.590;
+            .card-destino-texto-geral {
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@for $in from 1 through $totalCards {
+    .card-passagem-#{$in} {
+        width: $larguraCards;
+        height: $alturaCards;
+        border-radius: 15px;
+        box-shadow: $sombreamentoPadrao;
+        cursor: pointer;
+        .card-passagem-img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+            height: $alturaCards * 0.40;
+            @include backgroundiImagemFixed("../../img/imagemPassagem#{$in}.jpg");
+            background-attachment: initial;
+            background-position: center;
+            &:hover {
+                background-size: 125%;
+            }
+        }
+        .card-passagem-texto {
+            padding:5px;
+            margin-top:10px;
+            height: $alturaCards * 0.590;
+            .card-passagem-texto-geral {
+                font-size: 12px;
+            }
+        }
+    }
+}
+.container-novidades {
+    background-color: $laranja;
+    border-radius: 20px;
+    box-shadow: -1px -1px 10px black;
+
+    #nomeNewsletter {
+        height: 60px;
+    }
+    #emailNewsletter {
+        height: 60px;
+    }
+    p {
+        font-size: 13px;
+    }
+}
+
+.container-footer {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    box-shadow: 0px 0px 5px rgb(119, 119, 119);
+    h4 {
+        margin-bottom: 10px;
+    }
+    img {
+        width: 30px;
+        margin: 0 20px;
+    }
+    .flags {
+        margin-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-top:20px;
+        margin-bottom: 10px;
+        padding: 0;
+        color: $gray;
+    }
+}
+
+// .janela-login {
+
+// }

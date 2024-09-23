@@ -1,0 +1,25 @@
+@mixin backgroundiImagemFixed ($url) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-attachment: fixed;
+}
+@mixin alignItems ($type, $top, $left, $transform) {
+    position: $type;
+    top: $top;
+    left: $left;
+    transform: $transform;
+}
+@mixin backgroundIconFixedInputs ($url, $lado) {
+    background: url($url);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position-y: center;
+    background-position-x: $lado;
+    background-color: white;
+    &:focus {
+        background-color: rgb(255, 255, 214);
+    }
+}
